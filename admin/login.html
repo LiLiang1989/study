@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>猫的周末 - 管理员登陆</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Belgrano'
+	rel='stylesheet' type='text/css' />
+<style type="text/css">
+.loginform_row msg {
+	width: 460px;
+	text-align: center;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	function checkLogin() {
+		var usr = $('#username').val();
+		var ps = $('#password').val();
+		if (usr == '') {
+			$('#usr_msg').html('请输入用户名！');
+		}
+		if (ps == '') {
+			$('#ps_msg').html('请输入密码！');
+		}
+
+		if (usr != '' && ps != '') {
+			$('#login_msg').html('正在进行登陆验证，请稍后.....');
+			$.ajax({
+				url : '/admin/user/login',
+				type : 'POST',
+				data : $('#form1').serialize(),
+				dataType : 'json',
+				timeout : 2000,
+				error : function() {
+					alert('系统错误，请稍后再试！');
+					return false;
+				},
+				success : function(result) {
+					if (result == '登陆成功') {
+						$('#login_msg').html('登陆验证成功，正在跳转.....');
+						setTimeout(function() {
+							window.location.href = "/admin/index/index";
+						}, 1000);
+					} else {
+						$('#login_msg').html(result);
+						$('#password').val('');
+						return false;
+					}
+				}
+			});
+		} else {
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="loginpanelwrap">
+		<div class="loginheader">
+			<div class="logintitle">
+				<a href="javascript:void();">欢迎登陆</a>
+			</div>
+		</div>
+		<div class="loginform">
+			<form method="post" id="form1">
+				<div class="loginform_row">
+					<span id="login_msg" style="width: 500px; padding-left: 150px;"></span>
+				</div>
+				<div class="loginform_row">
+					<label>账&nbsp;&nbsp;号&nbsp;&nbsp;</label> <input type="text"
+						class="loginform_input" name="username" id="username"
+						onfocus="$('#usr_msg').html('')" /><span id="usr_msg"></span>
+				</div>
+				<div class="loginform_row">
+					<label>密&nbsp;&nbsp;码&nbsp;&nbsp;</label> <input type="password"
+						class="loginform_input" name="password" id="password"
+						onfocus="$('#ps_msg').html('')" /><span id="ps_msg"></span>
+				</div>
+				<div class="loginform_row">
+					<input type="button" class="loginform_submit"
+						value="&nbsp;&nbsp;登&nbsp;&nbsp;陆&nbsp;&nbsp;"
+						onclick="checkLogin();" />
+				</div>
+				<div style="float: right;">
+					<span>没有账号？<a href="register.html" target="_parent">去注册</a></span>
+				</div>
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+</body>
+</html>

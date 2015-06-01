@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>猫的周末 - 后台管理</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Belgrano'
+	rel='stylesheet' type='text/css' />
+<!-- jQuery file -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var $ = jQuery.noConflict();
+	$(function() {
+		$('#tabsmenu').tabify();
+		$(".toggle_container").hide();
+		$(".trigger").click(function() {
+			$(this).toggleClass("active").next().slideToggle("slow");
+			return false;
+		});
+	});
+	
+	$(function() {
+		$(".tlist tr:odd").addClass("odd"); // :odd or :even
+		$(".tlist tr:even").addClass("even"); // :odd or :even
+	});
+</script>
+</head>
+<body>
+	<div id="panelwrap">
+
+		<div class="header">
+			<div class="title">
+				<a href="#">猫的周末</a>
+			</div>
+
+			<div class="header_right">
+				欢迎您，<if condition="$_SESSION['admin'] neq null"><{$_SESSION['admin']}><else /><script>window.location.href="/admin/login.html";</script></if> <a href="#" class="settings">个人资料</a> <a href="/admin/user/logout"
+					class="logout">退出</a>
+			</div>
+
+		</div>
+
+		<div class="center_content">
+
+			<div id="right_wrap">
+				<div id="right_content">
+					<h2>注册用户</h2>
+
+
+					<table id="rounded-corner" class="tlist">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>账号</th>
+								<th>姓名</th>
+								<th>昵称</th>
+								<th>邮箱</th>
+								<th>电话</th>
+								<th>年龄</th>
+								<th>性别</th>
+								<th>注册日期</th>
+								<th>编辑</th>
+								<th>删除</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td colspan="12">本着真实有效的原则，请管理员谨慎操作，不要随意变更用户信息，如有疑问请联系系统开发员！</td>
+							</tr>
+						</tfoot>
+						<tbody>
+						<volist name="userList" id="list">
+						<tr>
+								<td><{$list.id}></td>
+								<td><{$list.account}></td>
+								<td><{$list.realname}></td>
+								<td><{$list.nickname}></td>
+								<td><{$list.email}></td>
+								<td><{$list.phone}></td>
+								<td><{$list.age}></td>
+								<td><{$list.sex}></td>
+								<td><{$list.createdate}></td>
+								<td><a href="javascript:alert('禁用操作，您无此权限！');"><img src="../images/edit.png" alt=""
+										title="" border="0" /></a></td>
+								<td><a href="javascript:alert('禁用操作，您无此权限！');"><img src="../images/trash.gif" alt=""
+										title="" border="0" /></a></td>
+							</tr>
+						</volist>
+							
+						</tbody>
+					</table>
+                    <!--  
+					<div class="form_sub_buttons">
+						<a href="#" class="button green">编辑所选</a> <a href="#"
+							class="button red">删除所选</a>
+					</div>
+					-->
+
+				</div>
+			</div>
+			<!-- end of right content-->
+
+
+			<div class="sidebar" id="sidebar">
+				<h2>用户管理</h2>
+
+				<ul>
+					<li><a href="#" class="selected">用户列表</a></li>
+					<li><a href="#">黑名单</a></li>
+				</ul>
+
+				<h2>内容管理</h2>
+
+				<ul>
+					<li><a href="#">文章列表</a></li>
+					<li><a href="#">文章类别</a></li>
+				</ul>
+
+				<h2>导航管理</h2>
+
+				<ul>
+					<li><a href="#">导航列表</a></li>
+					<li><a href="#">导航类别</a></li>
+				</ul>
+				<h2>站点管理</h2>
+
+				<ul>
+					<li><a href="#">通知公告</a></li>
+				</ul>
+			</div>
+
+
+			<div class="clear"></div>
+		</div>
+		<!--end of center_content-->
+	</div>
+	
+
+
+</body>
+</html>

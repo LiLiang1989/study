@@ -1,0 +1,49 @@
+[ 2015-05-31T07:48:27+08:00 ] 204.15.165.49 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0033s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'weeky_cat.ec_admin' doesn't exist
+
+[ 2015-05-31T23:22:28+08:00 ] 121.42.0.14 /admin/control/wxpay.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+ERR: 无法加载控制器:Control
+
+[ 2015-05-31T23:22:54+08:00 ] 121.42.0.14 /admin.action?debug=browser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'weeky_cat.ec_admin' doesn't exist
+
+[ 2015-05-31T23:22:57+08:00 ] 121.42.0.14 /admin.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0025s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'weeky_cat.ec_admin' doesn't exist
+
+[ 2015-05-31T23:23:06+08:00 ] 121.42.0.14 /admin.action?redirect%3A%25%7Bnew+java.lang.String%28%27http%3A%2F%2Fxxxxxxxxxxxxx%27%29%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'weeky_cat.ec_admin' doesn't exist
+

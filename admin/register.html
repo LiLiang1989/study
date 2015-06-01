@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>猫的周末 - 用户注册</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Belgrano'
+	rel='stylesheet' type='text/css' />
+<style type="text/css">
+.loginform_row msg {
+	width: 460px;
+	text-align: center;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	function checkLogin() {
+		var usr = $('#text').val();
+		var ps = $('#password').val();
+		var rps = $('#repassword').val();
+		var nickName = $('#nickName').val();
+		var code = $('#verifyCode').val();
+
+		if (usr == '') {
+			$('#usr_msg').html('请输入用户名！');
+		}
+		if (ps == '') {
+			$('#ps_msg').html('请输入密码！');
+		}
+		if (rps == '') {
+			$('#rps_msg').html('请输入确认密码！');
+		}
+		if (nickName == '') {
+			$('#nick_msg').html('请输入昵称！');
+		}
+		if (code == '') {
+			$('#code_msg').html('请输入验证码！');
+		}
+		if ((ps != rps) && ps != '' && rps != '') {
+			$('#rps_msg').html('两次输入密码不一致！');
+		}
+		if (usr != '' && ps != '' && rps != '' && nickName != '' && code != '') {
+			$.ajax({
+				url : '/admin/user/register',
+				type : 'post',
+				data : $('#registerForm').serialize(),
+				dataType : 'json',
+				timeout : 1000,
+				error : function() {
+					alert('系统错误，请稍后再试！');
+					return false;
+				},
+				success : function(data) {
+					if (data == '注册成功') {
+						$('#register_msg').html('注册成功，正在跳转...！');
+						setTimeout(function() {
+							window.location.href = "/home/";
+						}, 2000);
+					} else {
+						alert(data);
+						return false;
+					}
+				}
+			});
+		} else {
+			return false;
+		}
+	}
+
+	function fleshVerify() {
+		var time = new Date().getTime();
+		document.getElementById('verifyImg').src = '/admin/user/verify/' + time;
+	}
+</script>
+</head>
+<body>
+	<div id="loginpanelwrap">
+		<div class="loginheader">
+			<div class="logintitle">
+				<a href="javascript:void();">快速注册</a>
+			</div>
+		</div>
+		<div class="loginform">
+			<form method="post" id="registerForm">
+			    <div class="loginform_row">
+					<span id="register_msg" style="width: 500px; padding-left: 150px;"></span>
+				</div>
+				<div class="loginform_row">
+					<label>账&nbsp;&nbsp;&nbsp;&nbsp;号</label> <input type="text"
+						class="loginform_input" name="text" id="text"
+						onfocus="$('#usr_msg').html('')" /><span id="usr_msg"></span>
+				</div>
+				<div class="loginform_row">
+					<label>密&nbsp;&nbsp;&nbsp;&nbsp;码</label> <input type="password"
+						class="loginform_input" name="password" id="password"
+						onfocus="$('#ps_msg').html('')" /><span id="ps_msg"></span>
+				</div>
+				<div class="loginform_row">
+					<label>确认密码</label> <input type="password" class="loginform_input"
+						name="repassword" id="repassword" onfocus="$('#rps_msg').html('')" /><span
+						id="rps_msg"></span>
+				</div>
+				<div class="loginform_row">
+					<label>昵&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input type="text"
+						class="loginform_input" name="nickName" id="nickName"
+						onfocus="$('#nick_msg').html('')" /><span id="nick_msg"></span>
+				</div>
+				<div class="loginform_row">
+					<label>验&nbsp;证&nbsp;码</label> <input type="text"
+						class="loginform_input" name="verifyCode" id="verifyCode"
+						onfocus="$('#code_msg').html('')" /><span id="code_msg"></span>
+
+				</div>
+				<div class="loginform_row">
+					<img id="verifyImg" src='/admin/user/verify' style="align: center;"
+						onclick="fleshVerify()" title="点击刷新验证码" />
+				</div>
+				<div class="loginform_row">
+					<input type="button" class="loginform_submit"
+						value="&nbsp;&nbsp;注&nbsp;&nbsp;册&nbsp;&nbsp;"
+						onclick="checkLogin();" />
+				</div>
+				<div style="float: right;">
+					<span>已有账号？<a href="login.html" target="_parent">去登陆</a></span>
+				</div>
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+<meta charset="utf-8">
+<title>猫的周末</title>
+<include file="Public/head" />
+<script src="/Public/ckeditor/ckeditor.js"></script>
+<script src="/Public/ckfinder/ckfinder.js"></script>
+</head>
+
+<body role="document">
+
+	<include file="Public/header" />
+
+	<div class="container theme-showcase" role="main">
+		<div class="row mt">
+			<div class="col-sm-3">
+				<include file="Public/lside" />
+			</div>
+			<div class="col-sm-9 border-all">
+				<form class="form-signin" name="form1" action="Column/publish" method="post">
+					<h5 class="form-signin-heading">文章发布</h5>
+					<label>标题</label> <input type="text" id="inputEmail"
+						class="form-control" placeholder="标题" required autofocus>
+					<label>概述</label> <input type="text" id="inputPassword"
+						class="form-control" placeholder="概述" required>
+					<div class="mt mb">
+						<textarea cols="80" id="editor1" name="editor1" rows="20" placeholder="请输入内容" required></textarea>
+						<script type="text/javascript">
+							// This is a check for the CKEditor class. If not defined, the paths must be checked.
+
+							if (typeof CKEDITOR == 'undefined') {
+
+								document
+										.write('<strong><span style="color: #ff0000">Error</span>: CKEditor not found</strong>.'
+												+ 'This sample assumes that CKEditor (not included with CKFinder) is installed in'
+												+
+
+												'the "/ckeditor/" path. If you have it installed in a different place, just edit'
+												+ 'this file, changing the wrong paths in the <head> (line 5) and the "BasePath"'
+												+ 'value (line 32).')
+							}
+
+							else {
+
+								var editor = CKEDITOR.replace('editor1');
+
+								CKFinder.setupCKEditor(editor, '/Public/ckfinder/');
+
+								//CKFinder.SetupCKEditor( editor, { BasePath : '../../', RememberLastFolder : false } ) 
+							}
+						</script>
+
+					</div>
+
+					<button class="btn btn-lg btn-primary btn-block btn-width-100"
+						type="submit">提交</button>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- /container -->
+	<include file="Public/footer" />
+</body>
+</html>

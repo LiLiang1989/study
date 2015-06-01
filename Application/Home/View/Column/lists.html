@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+<meta charset="utf-8">
+<title>猫的周末</title>
+<include file="Public/head" />
+</head>
+
+<body role="document">
+	<include file="Public/header" />
+	<div class="container theme-showcase" role="main">
+		<div class="alert alert-warning" id="alert">
+			<button class="close" type="button" data-dismiss="alert">×</button>
+			<h5>提示!</h5>
+			只有审核通过的文章才能被他人看到。
+		</div>
+		<div class="row mt">
+			<div class="col-sm-3">
+				<include file="Public/lside" />
+			</div>
+			<div class="col-sm-9 border-all">
+				<table class="table">
+					<caption>文章列表</caption>
+					<thead>
+						<tr>
+							<th>标题</th>
+							<th>发布时间</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<tbody>
+					<volist name="articleList" id="vo"> 
+					<tr class="success">
+							<td><a href="{:U('index/page/id/'.$vo['id'])}" title="{$vo.title}">{$vo.title}</a></td>
+							<td>{$vo.create_time}</td>
+							<td>{$vo.status}</td>
+						</tr>
+				</volist>
+						
+					</tbody>
+				</table>
+
+				
+				<ul class="pagination">
+					<li><a href="#">上一页</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">下一页</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- /container -->
+	<include file="Public/footer" />
+</body>
+</html>

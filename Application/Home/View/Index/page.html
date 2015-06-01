@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>猫的周末</title>
+<link href="/Public/css/style.css" rel="stylesheet">
+<include file="Public/head" />
+</head>
+<body>
+	<include file="Public/header" />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9 blog-main">
+				<div class="blog-post">
+					<h2 class="blog-post-title">{$detail.title}</h2>
+					<div class="blog-post-meta">
+						<span class="fr">{$detail.create_time}</span> 作者：<a href="#">{$detail.usr_name}</a>&nbsp;&nbsp;&nbsp;<span>阅读（12）</span><span>赞（12）</span>
+					</div>
+					<div class="bdsharebuttonbox">
+						<a class="bds_more" href="#" data-cmd="more"></a><a
+							class="bds_qzone" href="#" data-cmd="qzone"></a><a
+							class="bds_tsina" href="#" data-cmd="tsina"></a><a
+							class="bds_tqq" href="#" data-cmd="tqq"></a><a class="bds_renren"
+							href="#" data-cmd="renren"></a><a class="bds_weixin" href="#"
+							data-cmd="weixin"></a>
+					</div>
+					<script>
+						window._bd_share_config = {
+							"common" : {
+								"bdSnsKey" : {},
+								"bdText" : "",
+								"bdMini" : "2",
+								"bdPic" : "",
+								"bdStyle" : "0",
+								"bdSize" : "16"
+							},
+							"share" : {},
+							"image" : {
+								"viewList" : [ "qzone", "tsina", "tqq",
+										"renren", "weixin" ],
+								"viewText" : "分享到：",
+								"viewSize" : "16"
+							},
+							"selectShare" : {
+								"bdContainerClass" : null,
+								"bdSelectMiniList" : [ "qzone", "tsina", "tqq",
+										"renren", "weixin" ]
+							}
+						};
+						with (document)
+							0[(getElementsByTagName('head')[0] || body)
+									.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+									+ ~(-new Date() / 36e5)];
+					</script>
+					<div class="detail-content">{$detail.content}</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">评论列表</h3>
+					</div>
+					<div class="panel-body">
+						<div class="comment-list" id="comment-list">
+							<form class="comment-box" id="commentForm" name="commentForm"
+								method="post" role="form">
+								<div class="form-group">
+									<input class="form-control" name="commentContent"
+										id="commentContent" placeholder="发表评论">
+								</div>
+								<div class="form-group">
+									<input type="hidden" name="articleId" value="{$detail.id}">
+									<a class="btn btn-primary" type="button" id="pl">发表评论</a>
+								</div>
+							</form>
+							<volist name="commentList" id="vo">
+							<div class="comment-box cf">
+								<div class="comment-info">
+									<a href="">{$vo.nick_name}</a><span>{$vo.create_time}</span>
+								</div>
+								<if condition="$vo['father_comment'] neq null">
+								<div class="reply-box alert alert-warning">
+									<div class="comment-info">
+										<a href="">{$vo['father_comment']['nick_name']}</a><span>{$vo['father_comment']['create_time']}</span>
+									</div>
+									<div class="comment-content">{$vo['father_comment']['content']}</div>
+								</div>
+								</if>
+								<div class="comment-content">
+									<p>{$vo.content}</p>
+								</div>
+								<div class="comment-reply">
+									<a onclick="response(this,'{$vo.id}');" class="reply-link">回复</a>
+								</div>
+							</div>
+							</volist>
+							<div id="response" style="display: none;">
+								<form class="reponse-box" id="responseForm" name="responseForm"
+								method="post" role="form">
+								<div class="form-group">
+								<input type="hidden" name="repleyCommentId" id="repleyCommentId">
+									<input class="form-control" name="responseContent"
+										id="responseContent" placeholder="回复内容">
+								</div>
+								<div class="form-group">
+									<a class="btn btn-primary" type="button" id="submitReply">提交回复</a>
+								</div>
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.blog-main -->
+			<include file="Public/nav" />
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+	<include file="Public/footer" />
+	<script type="text/javascript">
+		$(function() {
+			$('#pl').unbind('click');
+			$('#pl').click(function() {
+								var content = $('#commentContent').val().trim();
+								if (content == '') {
+									alert('评论填写不能为空');
+									return;
+								}
+								$('#pl').val('正在提交').attr("disabled","disabled");
+								$.ajax({
+											type : "post",
+											url : "/Home/Comment/addComment",
+											dataType : 'json',
+											data : $("#commentForm")
+													.serialize(),
+											success : function(data) {
+												if (data == '添加评论成功') {
+													alert(data);
+													$('#commentContent').val('');
+													window.location.reload();
+												} else if (data == '请先登录') {
+													alert(data);
+													window.location.href = "/member/login.html?backurl="+ window.location.href;
+												} else {
+													alert(data);
+												}
+												$('#pl').val('发表评论').attr("disabled", false);
+											},
+											error : function(XMLHttpRequest,
+													textStatus, errorThrown) {
+												alert('操作超时，请重新提交');
+												$('#pl').val('发表评论').attr("disabled", false);
+											}
+										});
+							})
+							
+			$('#submitReply').unbind('click');
+			$('#submitReply').click(function() {
+								var content = $('#responseContent').val().trim();
+								if (content == '') {
+									alert('回复内容不能为空');
+									return;
+								}
+								$('#submitReply').val('正在提交').attr("disabled","disabled");
+								$.ajax({
+											type : "post",
+											url : "/Home/Comment/addCommentReply",
+											dataType : 'json',
+											data : $("#responseForm").serialize(),
+											success : function(data) {
+												if (data == '回复成功') {
+													alert(data);
+													$('#responseContent').val('');
+													window.location.reload();
+												} else if (data == '请先登录') {
+													alert(data);
+													window.location.href = "/member/login.html?backurl="+ window.location.href;
+												} else {
+													alert(data);
+												}
+												$('#submitReply').val('提交回复').attr("disabled", false);
+											},
+											error : function(XMLHttpRequest,
+													textStatus, errorThrown) {
+												alert('操作超时，请重新提交');
+												$('#submitReply').val('提交回复').attr("disabled", false);
+											}
+										});
+							})
+		})
+
+		function response(obj,id) {
+			var oComment = obj.parentNode;//这里是关键。找到当前留言对象。
+			oComment.appendChild(document.getElementById("response"));
+			document.getElementById("response").style.display = "block";
+			document.getElementById("repleyCommentId").value = id;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,732 @@
+[ 2015-05-27T00:01:57+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001990s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0371s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0354s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0372s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0372s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0352s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002165s ]
+
+[ 2015-05-27T00:01:57+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010508s ]
+
+[ 2015-05-27T00:01:57+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432656117441
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001762s ]
+
+[ 2015-05-27T00:03:08+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002441s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0373s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0368s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0376s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0367s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002257s ]
+
+[ 2015-05-27T00:03:08+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002394s ]
+
+[ 2015-05-27T00:03:08+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432656188445
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001691s ]
+
+[ 2015-05-27T00:03:58+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002089s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0372s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0367s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0348s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0366s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0373s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0356s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001869s ]
+
+[ 2015-05-27T00:03:58+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001494s ]
+
+[ 2015-05-27T00:03:58+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432656238700
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001315s ]
+
+[ 2015-05-27T00:04:19+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0365s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0355s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0378s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0368s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001774s ]
+
+[ 2015-05-27T00:04:19+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001836s ]
+
+[ 2015-05-27T00:04:20+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432656260035
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002017s ]
+
+[ 2015-05-27T00:22:38+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002468s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0366s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0370s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0366s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0352s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000251s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002091s ]
+
+[ 2015-05-27T00:22:38+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002252s ]
+
+[ 2015-05-27T00:22:38+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657358590
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002066s ]
+
+[ 2015-05-27T00:24:19+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001730s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0359s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0363s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0360s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0338s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002125s ]
+
+[ 2015-05-27T00:24:19+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002077s ]
+
+[ 2015-05-27T00:24:19+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657459691
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002566s ]
+
+[ 2015-05-27T00:26:00+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001782s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0367s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0349s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0355s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0356s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0363s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0360s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0345s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002085s ]
+
+[ 2015-05-27T00:26:00+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002378s ]
+
+[ 2015-05-27T00:26:01+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657560919
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-27T00:27:42+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002177s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0363s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0357s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0370s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0372s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002581s ]
+
+[ 2015-05-27T00:27:42+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002492s ]
+
+[ 2015-05-27T00:27:43+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657662859
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+
+[ 2015-05-27T00:30:09+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004160s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0407s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0356s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0376s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0363s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0365s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000386s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000518s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035407s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001849s ]
+
+[ 2015-05-27T00:30:09+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001854s ]
+
+[ 2015-05-27T00:30:09+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657809446
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001737s ]
+
+[ 2015-05-27T00:30:49+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002239s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0405s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0418s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0414s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0403s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0404s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0410s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0383s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000247s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002257s ]
+
+[ 2015-05-27T00:30:49+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002781s ]
+
+[ 2015-05-27T00:30:50+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657849824
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001961s ]
+
+[ 2015-05-27T00:31:08+08:00 ] 127.0.0.1 /Home/Comment/addComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002176s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0369s ]
+SQL: INSERT INTO `ec_comment` (`article_id`,`reply_user_id`,`content`) VALUES ('22','1','我真的很喜欢这篇文章呢') [ RunTime:0.0562s ]
+
+[ 2015-05-27T00:31:10+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002601s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0357s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0359s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0339s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0376s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0352s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0343s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000363s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002256s ]
+
+[ 2015-05-27T00:31:10+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001978s ]
+
+[ 2015-05-27T00:31:11+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657870859
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002038s ]
+
+[ 2015-05-27T00:31:32+08:00 ] 127.0.0.1 /Home/Comment/addCommentReply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002208s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0361s ]
+SQL: SELECT * FROM `ec_comment` WHERE ( 22 ) LIMIT 1   [ RunTime:0.0345s ]
+SQL: INSERT INTO `ec_comment` (`reply_user_id`,`reply_father_id`,`article_id`,`to_user_id`,`content`) VALUES ('1','22','22','1','这是什么玩意儿') [ RunTime:0.0380s ]
+
+[ 2015-05-27T00:31:39+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001761s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0362s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0358s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0385s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0361s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '22' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0369s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0353s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002242s ]
+
+[ 2015-05-27T00:31:39+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001825s ]
+
+[ 2015-05-27T00:31:39+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432657899589
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002777s ]
+
+[ 2015-05-27T00:36:02+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002492s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0365s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0352s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0359s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0370s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '32' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.reply_father_id = '22' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0342s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002285s ]
+
+[ 2015-05-27T00:36:02+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002270s ]
+
+[ 2015-05-27T00:36:03+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432658163027
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002004s ]
+
+[ 2015-05-27T00:37:45+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001734s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0363s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0366s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0363s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0372s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.id = '22' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0343s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0359s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0339s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001753s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002164s ]
+
+[ 2015-05-27T00:37:45+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002444s ]
+
+[ 2015-05-27T00:37:46+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432658266153
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002160s ]
+
+[ 2015-05-27T00:38:14+08:00 ] 127.0.0.1 /Home/Comment/addCommentReply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003622s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `ec_comment` WHERE ( 32 ) LIMIT 1   [ RunTime:0.0341s ]
+SQL: INSERT INTO `ec_comment` (`reply_user_id`,`reply_father_id`,`article_id`,`to_user_id`,`content`) VALUES ('1','32','22','1','我也想知道是什么玩意呢') [ RunTime:0.0403s ]
+
+[ 2015-05-27T00:38:17+08:00 ] 127.0.0.1 /index/page/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001744s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `ec_article` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0364s ]
+SQL: SELECT sr.usr_name,sr.nick_name,ac.* FROM ec_user sr,ec_article ac WHERE ac.id = '22' AND ( sr.id=ac.usr_id ) LIMIT 1   [ RunTime:0.0484s ]
+SQL: SHOW COLUMNS FROM `ec_comment` [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0360s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.article_id = '22' AND ( cm.reply_user_id=sr.id ) ORDER BY cm.create_time desc,cm.id desc  [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0374s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.id = '32' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0363s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.id = '22' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0353s ]
+SQL: SHOW COLUMNS FROM `ec_user` [ RunTime:0.0361s ]
+SQL: SELECT sr.usr_name,sr.nick_name,cm.* FROM ec_user sr,ec_comment cm WHERE cm.id = '24' AND ( cm.reply_user_id=sr.id ) LIMIT 1   [ RunTime:0.0341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002165s ]
+
+[ 2015-05-27T00:38:17+08:00 ] 127.0.0.1 /Public/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002259s ]
+
+[ 2015-05-27T00:38:17+08:00 ] 127.0.0.1 /assets/flash/ZeroClipboard.swf?noCache=1432658297686
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002348s ]
+
