@@ -3,7 +3,7 @@ return array (
 		
 		// 添加数据库配置信息
 		'db_type' => 'mysql', // 数据库类型
-		'db_host' => '120.26.122.179', // 服务器地址
+		'db_host' => 'localhost', // 服务器地址
 		'db_name' => 'weeky_cat', // 数据库名
 		'db_user' => 'user', // 用户名
 		'db_pwd' => 'user2015', // 密码
